@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prediction Diabetes</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Prediksi Diatabes</h1>
+      <form action="/predict" method="post">
+        <label for="pregnancies">Jumlah Kehamilan:</label>
+        <input type="text" name="pregnancies" required />
+
+        <label for="glucose">Kadar Glukosa:</label>
+        <input type="text" name="glucose" required />
+
+        <label for="bloodpressure">Tekanan Darah:</label>
+        <input type="text" name="bloodpressure" required />
+
+        <label for="skinthickness">Ketebalan Kulit:</label>
+        <input type="text" name="skinthickness" required />
+
+        <label for="insulin">Kadar Insulin:</label>
+        <input type="text" name="insulin" required />
+
+        <label for="bmi">Indeks Massa Tubuh:</label>
+        <input type="text" name="bmi" required />
+
+        <label for="diabetespedigree">Fungsi Turunan Diabetes:</label>
+        <input type="text" name="diabetespedigree" required />
+
+        <label for="age">Usia:</label>
+        <input type="text" name="age" required />
+
+        <button type="submit">Prediksi</button>
+      </form>
+      
+      {% if prediction_text %}
+      <h2>{{ prediction_text }}</h2>
+      {% endif %}
+    </div>
+  </body>
+</html>
