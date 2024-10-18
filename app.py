@@ -14,23 +14,42 @@ def home():
 
 @app.route('/predict', methods=['POST'])
 def predict():
-  features = [
-    float(request.form['pregnancies']),
-    float(request.form['glucose']),
-    float(request.form['bloodpressure']),
-    float(request.form['skinthickness']),
-    float(request.form['insulin']),
-    float(request.form['bmi']),
-    float(request.form['diabetespedigree']),
-    float(request.form['age']),
-  ]
+  try:
+      # Ambil data dari form input
+      pregnancies = request.form['pregnancies']
+      glucose = request.form['glucose']
+      bloodpressure = request.form['bloodpressure']
+      skinthickness = request.form['skinthickness']
+      insulin = request.form['insulin']
+      bmi = request.form['bmi']
+      diabetespedigree = request.form['diabetespedigree']
+      age = request.form['age']
+      
+      if not all([pregnancies, glucose, bloodpressure, skinthickness, insulin, bmi, diabetespedigree, age]):
+        return render_template('index.html', prediction_text="Mohon lengkapi semua field!")
 
-  feature_array = np.array(features).reshape(1, -1)
+      # Konversi input menjadi array numpy
+      features = [float(pregnancies), float(glucose), float(bloodpressure), float(skinthickness), float(insulin), float(bmi), float(diabetespedigree), float(age)]
+      prediction = model.predict([features])
 
-  prediction = model.predict(feature_array)
+      output = "Diabetes" if prediction[0] == 1 else "Tidak Diabetes"
 
-  output = "Diabetes" if prediction[0] == 1 else "Tidak Diabetes"
-  return render_template('index.html', prediction_text='Hasil Prediksi: {}'.format(output))
+      # Kirim data input dan hasil prediksi kembali ke template
+      return render_template('index.html', 
+                              prediction_text=f"Hasil Prediksi: {output}",
+                              input_data={
+                                  "Pregnancies": pregnancies,
+                                  "Glucose": glucose,
+                                  "Blood Pressure": bloodpressure,
+                                  "Skin Thickness": skinthickness,
+                                  "Insulin": insulin,
+                                  "BMI": bmi,
+                                  "Diabetes Pedigree": diabetespedigree,
+                                  "Age": age
+                              })
+
+  except Exception as e:
+    return render_template('index.html', prediction_text="Error: Mohon masukkan data yang valid!")
 
 if __name__ == '__main__':
   app.run(debug=True)

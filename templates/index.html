@@ -4,42 +4,79 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prediction Diabetes</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
   </head>
   <body>
     <div class="container">
-      <h1>Prediksi Diatabes</h1>
-      <form action="/predict" method="post">
-        <label for="pregnancies">Jumlah Kehamilan:</label>
-        <input type="text" name="pregnancies" required />
+      <div class="form-container">
+        <h1>Prediksi Diabetes</h1>
+        <form id="predictionForm" action="/predict" method="post">
+          <label for="pregnancies">Jumlah Kehamilan Yang Pernah Di Alami</label>
+          <input type="text" name="pregnancies" required />
 
-        <label for="glucose">Kadar Glukosa:</label>
-        <input type="text" name="glucose" required />
+          <label for="glucose">Kadar Glukosa</label>
+          <input type="text" name="glucose" required />
 
-        <label for="bloodpressure">Tekanan Darah:</label>
-        <input type="text" name="bloodpressure" required />
+          <label for="bloodpressure">Tekanan Darah</label>
+          <input type="text" name="bloodpressure" required />
 
-        <label for="skinthickness">Ketebalan Kulit:</label>
-        <input type="text" name="skinthickness" required />
+          <label for="skinthickness">Ketebalan Kulit</label>
+          <input type="text" name="skinthickness" required />
 
-        <label for="insulin">Kadar Insulin:</label>
-        <input type="text" name="insulin" required />
+          <label for="insulin">Kadar Insulin</label>
+          <input type="text" name="insulin" required />
 
-        <label for="bmi">Indeks Massa Tubuh:</label>
-        <input type="text" name="bmi" required />
+          <label for="bmi">Indeks Massa Tubuh</label>
+          <input type="text" name="bmi" required />
 
-        <label for="diabetespedigree">Fungsi Turunan Diabetes:</label>
-        <input type="text" name="diabetespedigree" required />
+          <label for="diabetespedigree">Fungsi Turunan Diabetes</label>
+          <input type="text" name="diabetespedigree" required />
 
-        <label for="age">Usia:</label>
-        <input type="text" name="age" required />
+          <label for="age">Usia</label>
+          <input type="text" name="age" required />
 
-        <button type="submit">Prediksi</button>
-      </form>
-      
-      {% if prediction_text %}
-      <h2>{{ prediction_text }}</h2>
-      {% endif %}
+          <button type="submit">Prediksi</button>
+        </form>
+      </div>
+
+      <div class="result-container">
+        {% if prediction_text %}
+        <h2>Hasil Prediksi</h2>
+        <p>{{ prediction_text }}</p>
+
+        <h3>Data yang Diinput:</h3>
+        <ul>
+          {% for key, value in input_data.items() %}
+          <li><strong>{{ key }}:</strong> {{ value }}</li>
+          {% endfor %}
+        </ul>
+        {% else %}
+        <h2>Hasil Prediksi Akan Ditampilkan di Sini</h2>
+        {% endif %}
+      </div>
     </div>
+
+    <script>
+      document
+        .getElementById("predictionForm")
+        .addEventListener("submit", function (e) {
+          const inputs = document.querySelectorAll("input");
+          let valid = true;
+
+          inputs.forEach((input) => {
+            if (!input.value) {
+              valid = false;
+            }
+          });
+
+          if (!valid) {
+            e.preventDefault();
+            alert("Mohon lengkapi semua field sebelum submit.");
+          }
+        });
+    </script>
   </body>
 </html>
