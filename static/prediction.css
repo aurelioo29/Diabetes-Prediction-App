@@ -13,7 +13,7 @@ body {
   display: flex;
   justify-content: center;
   background-color: white;
-  padding: 30px;
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   max-width: 800px;
@@ -92,10 +92,10 @@ button:hover {
   align-items: center;
   background-color: #1b1c51;
   color: white;
-  padding: 15px 20px;
+  padding: 9px 20px;
   border-top: 2px solid #ddd;
   position: relative;
-  margin-top: 63px;
+  /* margin-top: 63px; */
 }
 
 .footer ul {

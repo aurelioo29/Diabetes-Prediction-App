@@ -14,6 +14,12 @@
       <div class="form-container">
         <h1>Prediksi Diabetes</h1>
         <form id="predictionForm" action="/predict" method="post">
+          <label for="name">Nama</label>
+          <input type="text" name="name" required />
+
+          <label for="no_hp">Nomor HP</label>
+          <input type="number" name="no_hp" required />
+
           <label for="pregnancies">Jumlah Kehamilan Yang Pernah Di Alami</label>
           <input type="number" name="pregnancies" required />
 
