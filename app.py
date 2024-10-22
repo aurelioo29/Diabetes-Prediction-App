@@ -5,7 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:12Axatower34@localhost/diabetes_prediction'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:12Axatower34@:3307/diabetes_prediction'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
@@ -13,6 +13,8 @@ db = SQLAlchemy(app)
 # Model database
 class DiabetesData(db.Model):
   id = db.Column(db.Integer, primary_key=True)
+  name = db.Column(db.String(100))  # Kolom untuk menyimpan nama
+  no_hp = db.Column(db.String(15))  # Kolom untuk menyimpan nomor HP
   pregnancies = db.Column(db.Integer)
   glucose = db.Column(db.Float)
   bloodpressure = db.Column(db.Float)
@@ -40,7 +42,7 @@ def prediction():
 def predict():
   try:
     name = request.form['name']  
-    no_hp = int(request.form['no_hp'])  
+    no_hp = request.form['no_hp']  
     pregnancies = int(request.form['pregnancies'])
     glucose = float(request.form['glucose'])
     bloodpressure = float(request.form['bloodpressure'])
