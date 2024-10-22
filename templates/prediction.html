@@ -10,34 +10,33 @@
     />
   </head>
   <body>
-    <div class="content"></div>
     <div class="container">
       <div class="form-container">
         <h1>Prediksi Diabetes</h1>
         <form id="predictionForm" action="/predict" method="post">
           <label for="pregnancies">Jumlah Kehamilan Yang Pernah Di Alami</label>
-          <input type="text" name="pregnancies" required />
+          <input type="number" name="pregnancies" required />
 
           <label for="glucose">Kadar Glukosa</label>
-          <input type="text" name="glucose" required />
+          <input type="number" name="glucose" required />
 
           <label for="bloodpressure">Tekanan Darah</label>
-          <input type="text" name="bloodpressure" required />
+          <input type="number" name="bloodpressure" required />
 
           <label for="skinthickness">Ketebalan Kulit</label>
-          <input type="text" name="skinthickness" required />
+          <input type="number" name="skinthickness" required />
 
           <label for="insulin">Kadar Insulin</label>
-          <input type="text" name="insulin" required />
+          <input type="number" name="insulin" required />
 
           <label for="bmi">Indeks Massa Tubuh</label>
-          <input type="text" name="bmi" required />
+          <input type="number" step="0.01" name="bmi" required />
 
           <label for="diabetespedigree">Fungsi Turunan Diabetes</label>
-          <input type="text" name="diabetespedigree" required />
+          <input type="number" step="0.01" name="diabetespedigree" required />
 
           <label for="age">Usia</label>
-          <input type="text" name="age" required />
+          <input type="number" name="age" required />
 
           <button type="submit">Prediksi</button>
         </form>
