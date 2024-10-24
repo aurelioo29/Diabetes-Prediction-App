@@ -71,13 +71,12 @@ nav .nav-links a:hover {
   flex-direction: column; /* Susunan vertikal */
   align-items: center;
   text-align: center;
-  padding: 100px 20px;
-  background: linear-gradient(135deg, rgba(255, 200, 200, 0.3), transparent);
+  padding: 20px;
 }
 
 .hero-image {
-  width: 70%; /* Perbesar gambar  ke 80% dari lebar kontainer */
-  max-width: 500px; /* Maksimal lebar 1200px */
+  width: 65%;
+  max-width: 2000px; /* Maksimal lebar 1200px */
   height: auto; /* Menjaga proporsi gambar */
   border-radius: 20px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
