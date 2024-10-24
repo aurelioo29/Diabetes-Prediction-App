@@ -12,16 +12,15 @@
   <body>
     <!-- Navbar -->
     <nav class="navbar">
-      <div class="logo"><a href="#">Prediction Diabetes</a></div>
+      <div class="logo"><a href="#">Prediksi Resiko Diabetes</a></div>
       <ul class="nav-links">
         <li><a href="#intro">Introduction</a></li>
-        <li><a href="#step">Our Step Tuning</a></li>
-        <li><a href="#app">Our Application</a></li>
+        <li><a href="#app">Ayo Coba</a></li>
       </ul>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <!-- <section class="hero">
       <img
         src="{{ url_for('static', filename='assets/hero.jpg') }}"
         alt="hero image"
@@ -38,9 +37,8 @@
           hasil yang dapat diandalkan bagi pengguna yang ingin memahami risiko
           diabetes mereka.
         </p>
-        <!-- <button class="cta-button">Learn More</button> -->
       </div>
-    </section>
+    </section> -->
 
     <!-- Introduction Section -->
     <section class="intro" id="intro">
@@ -60,139 +58,168 @@
           </div>
         </div>
 
-        <!-- Penjelasan di Sebelah Kanan -->
-        <div class="intro-text">
+        <div class="image-answer">
           <p>
             Diabetes adalah kondisi kronis yang mempengaruhi bagaimana tubuh
             mengolah glukosa (gula) darah, sumber energi penting bagi sel-sel
             tubuh. Glukosa yang tidak terkontrol dapat menyebabkan berbagai
             komplikasi kesehatan.
           </p>
+        </div>
+      </div>
 
-          <h3 class="accordion-header">Jenis-Jenis Diabetes</h3>
-          <div class="accordion-content">
-            <ul>
-              <li>
-                <strong>Diabetes Tipe 1:</strong> Kondisi di mana tubuh tidak
-                dapat memproduksi insulin sama sekali. Biasanya terjadi sejak
-                usia muda.
-              </li>
-              <li>
-                <strong>Diabetes Tipe 2:</strong> Terjadi ketika tubuh tidak
-                menggunakan insulin dengan baik. Ini adalah tipe yang paling
-                umum dan terkait dengan gaya hidup.
-              </li>
-              <li>
-                <strong>Diabetes Gestasional:</strong> Terjadi selama kehamilan
-                dan bisa meningkatkan risiko diabetes tipe 2 setelah melahirkan.
-              </li>
-            </ul>
-          </div>
+      <!-- Accordion -->
+      <div class="accordion">
+        <h3 class="accordion-header">Jenis-Jenis Diabetes</h3>
+        <div class="accordion-content">
+          <ul>
+            <li>
+              <i>Diabetes Tipe 1:</i> Kondisi di mana tubuh tidak dapat
+              memproduksi insulin sama sekali. Biasanya terjadi sejak usia muda.
+            </li>
+            <li>
+              <i>Diabetes Tipe 2:</i> Terjadi ketika tubuh tidak menggunakan
+              insulin dengan baik. Ini adalah tipe yang paling umum dan terkait
+              dengan gaya hidup.
+            </li>
+            <li>
+              <i>Diabetes Gestasional:</i> Terjadi selama kehamilan dan bisa
+              meningkatkan risiko diabetes tipe 2 setelah melahirkan.
+            </li>
+          </ul>
+        </div>
 
-          <h3 class="accordion-header">Gejala Diabetes</h3>
-          <div class="accordion-content">
-            <ul>
-              <li>Sering merasa haus</li>
-              <li>Sering buang air kecil, terutama pada malam hari</li>
-              <li>Rasa lapar yang berlebihan</li>
-              <li>Kelelahan dan mudah lelah</li>
-              <li>Penglihatan kabur</li>
-              <li>Luka yang sulit sembuh</li>
-              <li>
-                Penurunan berat badan tanpa sebab yang jelas (pada diabetes tipe
-                1)
-              </li>
-            </ul>
-          </div>
+        <h3 class="accordion-header">Gejala Diabetes</h3>
+        <div class="accordion-content">
+          <ul>
+            <li>Sering merasa haus</li>
+            <li>Sering buang air kecil, terutama pada malam hari</li>
+            <li>Rasa lapar yang berlebihan</li>
+            <li>Kelelahan dan mudah lelah</li>
+            <li>Penglihatan kabur</li>
+            <li>Luka yang sulit sembuh</li>
+            <li>
+              Penurunan berat badan tanpa sebab yang jelas (pada diabetes tipe
+              1)
+            </li>
+          </ul>
+        </div>
 
-          <h3 class="accordion-header">Pencegahan dan Manajemen Diabetes</h3>
-          <div class="accordion-content">
-            <p>
-              Beberapa langkah yang dapat dilakukan untuk mencegah atau
-              mengelola diabetes meliputi:
-            </p>
-            <ul>
-              <li>Menjaga berat badan ideal melalui pola makan sehat</li>
-              <li>Berolahraga secara teratur (setidaknya 30 menit sehari)</li>
-              <li>
-                Menghindari konsumsi gula dan karbohidrat olahan secara
-                berlebihan
-              </li>
-              <li>Memeriksa kadar gula darah secara berkala</li>
-              <li>
-                Jika diperlukan, menggunakan obat-obatan sesuai petunjuk dokter
-              </li>
-            </ul>
-          </div>
+        <h3 class="accordion-header">Pencegahan dan Manajemen Diabetes</h3>
+        <div class="accordion-content">
+          <p>
+            Beberapa langkah yang dapat dilakukan untuk mencegah atau mengelola
+            diabetes meliputi:
+          </p>
+          <ul>
+            <li>Menjaga berat badan ideal melalui pola makan sehat</li>
+            <li>Berolahraga secara teratur (setidaknya 30 menit sehari)</li>
+            <li>
+              Menghindari konsumsi gula dan karbohidrat olahan secara berlebihan
+            </li>
+            <li>Memeriksa kadar gula darah secara berkala</li>
+            <li>
+              Jika diperlukan, menggunakan obat-obatan sesuai petunjuk dokter
+            </li>
+          </ul>
+        </div>
+
+        <h3 class="accordion-header">Komposisi Pencegah Penyakit Diabetes</h3>
+        <div class="accordion-content">
+          <img
+            src="{{ url_for('static', filename='assets/table.jpeg') }}"
+            alt=""
+            width="100%"
+          />
+        </div>
+
+        <h3 class="accordion-header">
+          Apa Saja Makanan, Minuman, dan Buah yang Boleh Dikonsumsi oleh
+          Penderita Diabetes?
+        </h3>
+        <div class="accordion-content">
+          <ul>
+            <li>
+              <i><b>Makanan:</b></i>
+              - Beras merah, oatmeal, quinoa - Ikan (salmon, tuna), dada ayam
+              tanpa kulit, tahu, tempe - Sayuran seperti brokoli, bayam, dan
+              mentimun
+            </li>
+            <li>
+              <i><b>Buah:</b></i>
+              - Apel, pir, stroberi, dan kiwi - Alpukat dan buah beri
+              (blueberry, raspberry)
+            </li>
+            <li>
+              <i><b>Minuman:</b></i>
+              - Air putih dan infused water - Teh hijau atau teh herbal tanpa
+              gula - Susu rendah lemak atau susu almond
+            </li>
+            <li>
+              <i><b>Tips:</b></i>
+              - Hindari pemanis buatan berlebihan, gunakan stevia jika perlu. -
+              Pilih makanan berserat tinggi untuk mengontrol kadar gula. -
+              Perhatikan porsi makan agar gula darah tetap stabil.
+            </li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- Step Section -->
-    <section class="data-tuning-steps" id="step">
-      <h2>Langkah-Langkah Persiapan untuk Data Tuning</h2>
-      <div class="steps-container">
-        <div class="step-card">
-          <h3>1. Data Collection</h3>
-          <p>Mengumpulkan dataset yang relevan untuk prediksi diabetes.</p>
-        </div>
-        <div class="step-card">
-          <h3>2. Data Preprocessing</h3>
-          <p>Membersihkan dan siapkan data untuk analisis.</p>
-        </div>
-        <div class="step-card">
-          <h3>3. Model Training</h3>
-          <p>
-            Menggunakan Jupyter Notebook untuk mengimplementasikan algoritma
-            Naive Bayes dan lakukan data tuning untuk mengoptimalkan kinerja.
-          </p>
-        </div>
-        <div class="step-card">
-          <h3>4. Serialization</h3>
-          <p>
-            Menyimpan model yang telah dibuat sebelum nya sebagai file .pickle
-            untuk di gunakan pada pembuatan web data tuning.
-          </p>
-        </div>
-        <div class="step-card">
-          <h3>5. Web Deployment</h3>
-          <p>
-            Menggunakan framework Flask untuk membuat aplikasi web ini, yang
-            memungkinkan pengguna untuk mengakses model prediksi.
-          </p>
-        </div>
-      </div>
-    </section>
-
+    <!-- App Section -->
     <section class="app" id="app">
       <div class="app-content">
-        <h2>Ayok Mulai Mencoba Cek Diabetes Anda !</h2>
-        <p>
-          Aplikasi kami memanfaatkan dari pembelajaran Data Science dan Machine
-          learning, serta memberikan prediksi akurat tentang risiko diabetes.
-          <br />
-          Dengan interface yang user friendly atau mudah digunakan serta hasil
-          waktu nyata, mengelola kesehatan Anda yang sebelum nya tidak pernah
-          semudah ini!
-        </p>
-        <a href="{{ url_for('prediction') }}" class="cta-button"
-          >Mulai untuk Prediksi Diabetes Anda</a
-        >
+        <h2>Ayok Segera Cek Diabetes Anda !</h2>
+      </div>
+      <div class="app-container">
+        <div class="form-container">
+          <form id="predictionForm" action="/" method="post">
+            <label for="name">Nama</label>
+            <input type="text" name="name" required />
+
+            <label for="no_hp">Nomor HP</label>
+            <input type="number" name="no_hp" required />
+
+            <label for="pregnancies"
+              >Jumlah Kehamilan Yang Pernah Di Alami</label
+            >
+            <input type="number" name="pregnancies" required />
+
+            <label for="glucose">Kadar Glukosa</label>
+            <input type="number" name="glucose" required />
+
+            <label for="bloodpressure">Tekanan Darah</label>
+            <input type="number" name="bloodpressure" required />
+
+            <label for="skinthickness">Ketebalan Kulit</label>
+            <input type="number" name="skinthickness" required />
+
+            <label for="insulin">Kadar Insulin</label>
+            <input type="number" name="insulin" required />
+
+            <label for="bmi">Indeks Massa Tubuh</label>
+            <input type="text" name="bmi" required />
+
+            <label for="diabetespedigree">Fungsi Turunan Diabetes</label>
+            <input type="text" name="diabetespedigree" required />
+
+            <label for="age">Usia</label>
+            <input type="number" name="age" required />
+
+            <button type="button" id="predictButton">Prediksi</button>
+          </form>
+        </div>
+
+        <div class="result-container">
+          <h2>Hasil Prediksi Anda Tampil di Sini</h2>
+          <p id="diabetes-text"></p>
+          <div id="predictionResult"></div>
+        </div>
       </div>
     </section>
 
     <footer>Copyright &copy; 2024 | All rights reserved.</footer>
   </body>
-  <script>
-    document.querySelectorAll(".accordion-header").forEach((header) => {
-      header.addEventListener("click", function () {
-        document.querySelectorAll(".accordion-content").forEach((content) => {
-          content.classList.remove("active");
-        });
 
-        const content = header.nextElementSibling;
-        content.classList.toggle("active");
-      });
-    });
-  </script>
+  <script src="{{url_for('static', filename='script.js')}}"></script>
 </html>

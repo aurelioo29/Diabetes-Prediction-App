@@ -25,7 +25,7 @@ nav.navbar {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   border-radius: 40px;
   margin: 20px auto;
-  max-width: 1200px;
+  max-width: 1700px;
 }
 
 nav .logo {
@@ -56,20 +56,13 @@ nav .nav-links a {
 
 nav .nav-links a:hover {
   color: #1b1c51;
-}
-
-.cta-button {
-  padding: 10px 20px;
+  padding: 10px;
   background-color: #1b1c51;
   color: white;
   border: none;
   border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #333;
 }
 
 /* Hero Section Styles */
@@ -108,29 +101,28 @@ nav .nav-links a:hover {
   color: #555;
 }
 
-/* Section Intro Styles */
+/* Section Diabetets Explain */
 .intro {
-  padding: 80px 20px;
-  background-color: #f5f5f5;
+  padding: 10px 50px;
+  /* background-color: #3d2525; */
 }
-
 .intro-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 40px;
-  max-width: 1700px;
+  max-width: 2000px;
   margin: 0 auto;
+  padding: 50px 20px;
 }
 
-/* Gaya Khusus untuk Gambar Dokter */
+/* Gaya Dokter Kiri */
 .image {
   position: relative;
   text-align: center;
   isolation: isolate;
   width: 50%;
 }
-
 .image__bg {
   position: absolute;
   top: 50%;
@@ -142,20 +134,18 @@ nav .nav-links a:hover {
   border-radius: 100%;
   z-index: -1;
 }
-
 .image img {
   width: 100%;
   max-width: 475px;
   border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Konten dalam Gambar */
+/* Konten Pertanyaan Gambar */
 .image__content {
   position: absolute;
   top: 50%;
-  left: 50%;
-  padding: 1rem 2rem;
+  left: 40%;
+  padding: 10px;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -164,159 +154,197 @@ nav .nav-links a:hover {
   border-radius: 5px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
 }
-
 .image__content__2 {
-  transform: translate(calc(-50% + 8rem), calc(-50% + 10rem));
+  transform: translate(calc(-50% + 10rem), calc(-50% + 10rem));
 }
-
 .image__content__2 ul {
   list-style: none;
 }
-
 .image__content__2 li {
   color: #333;
   font-size: 20px;
-  font-weight: 900;
+  font-weight: 950;
+  /* text-align: center; */
 }
 
-/* Penjelasan Teks di Sebelah Kanan */
-.intro-text {
+/* Jawaban Kanan */
+.image-answer {
   width: 50%;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.8;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  text-align: center;
 }
 
-.intro-text h2 {
+/* Accordion Section */
+.accordion {
+  width: 100%;
+}
+.accordion h2 {
   font-size: 32px;
   color: #1b1c51;
   margin-bottom: 15px;
 }
-
-.intro-text p {
-  font-size: 25px;
-  margin-bottom: 15px;
+.accordion p {
+  font-size: 18px;
+  line-height: 10px;
   color: black;
-  padding-bottom: 50px;
 }
-
-.cta-button {
-  padding: 10px 20px;
-  background-color: #1b1c51;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.accordion-content ul li {
+  line-height: 30px;
+  font-weight: 530;
+  font-size: 18px;
 }
-
-.cta-button:hover {
-  background-color: #333;
-}
-
 .accordion-header {
   cursor: pointer;
   font-size: 20px;
-  margin: 15px 0;
-  padding: 10px;
+  margin: 20px 0;
+  padding: 15px;
   background-color: #1b1c51;
   color: white;
   border-radius: 5px;
   transition: background-color 0.3s;
+  position: relative;
 }
-
-.accordion-header:hover {
-  background-color: #333;
+.accordion-header::after {
+  content: "+";
+  position: absolute;
+  right: 20px;
+  font-size: 20px;
 }
-
+.accordion-header.active::after {
+  content: "-";
+}
 .accordion-content {
-  display: none; /* Sembunyikan konten awalnya */
+  display: none;
   padding: 10px 15px;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 5px;
-  margin-bottom: 15px;
 }
-
 .accordion-content.active {
-  display: block; /* Tampilkan konten saat aktif */
+  display: block;
 }
 
-.data-tuning-steps {
-  padding: 180px 50px;
-  background-color: #f5f5f5;
-  text-align: center;
-  background: linear-gradient(135deg, rgba(255, 200, 200, 0.3), transparent);
-}
-
-.data-tuning-steps h2 {
-  font-size: 32px;
-  color: #1b1c51;
-  margin-bottom: 100px;
-}
-
-.steps-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 20px;
-}
-
-.step-card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 20px;
-  width: 90%;
-  max-width: 400px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
-}
-
-.step-card:hover {
-  transform: translateY(-5px);
-}
-
-.step-card h3 {
-  font-size: 24px;
-  color: #1b1c51;
-  margin-bottom: 10px;
-}
-
-.step-card p {
-  font-size: 18px;
-  color: #555;
-}
-
+/* Our Application */
 .app {
   padding: 100px 20px;
   background-color: #f5f5f5;
   text-align: center;
 }
-
 .app-content h2 {
   font-size: 32px;
   color: #1b1c51;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
-
-.app-content p {
-  font-size: 18px;
-  color: #555;
-  margin-bottom: 50px;
+/* Form Application */
+.app-container {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  width: 100%;
+  flex-direction: row;
 }
-
-.app-content .cta-button {
-  padding: 12px 25px;
-  background-color: #1b1c51;
+.form-container,
+.result-container {
+  flex: 1;
+  padding: 50px;
+}
+.form-container {
+  border-right: 5px solid #000;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+label {
+  margin-top: 10px;
+}
+input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+button {
+  padding: 10px;
+  background-color: #5cb85c;
   color: white;
   border: none;
   border-radius: 5px;
-  text-decoration: none;
-  font-size: 18px;
-  transition: background-color 0.3s ease;
+  cursor: pointer;
+  margin-top: 10px;
+}
+button:hover {
+  background-color: #4cae4c;
+}
+/* .result-container {
+  margin-top: 20px;
+} */
+/* result section */
+#diabetes-text {
+  font-size: 30px;
+  text-decoration: underline;
+}
+#predictionResult {
+  font-size: 1em;
+  font-weight: bold;
+}
+/* TABLES RESULT */
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #666666;
+}
+.key {
+  font-weight: bold;
+}
+.value {
+  margin-left: auto;
+}
+/* Convert TEXT */
+.green-text {
+  color: green;
+  font-weight: bold;
+}
+.red-text {
+  color: red;
+  font-weight: bold;
 }
 
-.app-content .cta-button:hover {
-  background-color: #333;
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
 
+th,
+td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #3498db;
+  color: white;
+}
+
+/* Foooter */
 footer {
   background-color: #1b1c51;
   text-align: center;
