@@ -28,6 +28,22 @@ nav.navbar {
   max-width: 1700px;
 }
 
+/* Hamburger menu styling */
+.hamburger {
+  display: none; /* Hide by default (for desktop) */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  transition: all 0.3s ease;
+}
+
 nav .logo {
   font-size: 24px;
   font-weight: bold;
@@ -91,8 +107,6 @@ nav .nav-links a:hover {
 .hero-image {
   margin-top: 50px;
   width: 60%;
-  max-width: 2000px;
-  height: auto;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
@@ -360,4 +374,204 @@ footer {
   color: white;
   padding: 15px;
   font-size: large;
+}
+
+/* Base styles tetap sama */
+
+/* Tablet Screens (max-width: 768px) */
+@media only screen and (max-width: 768px) {
+  /* Hero section adjustments */
+  .hero-sec {
+    flex-direction: column; /* Stack images vertically on tablet */
+    gap: 20px;
+  }
+
+  .hero-sec img {
+    width: 100%; /* Full width on tablet */
+  }
+
+  /* Intro section adjustments */
+  .intro-container {
+    flex-direction: column;
+    text-align: center; /* Center text on tablet */
+  }
+
+  .image,
+  .image-answer {
+    width: 100%; /* Full width on tablet */
+    margin-bottom: 20px;
+  }
+
+  /* Accordion text size adjustments */
+  .accordion-header {
+    font-size: 18px;
+  }
+
+  .accordion-content ul li {
+    font-size: 16px;
+  }
+
+  /* App form and result stacking on tablet */
+  .app-container {
+    flex-direction: column; /* Stack form and result vertically */
+    padding: 20px;
+  }
+
+  .form-container {
+    border-right: none;
+    border-bottom: 5px solid #000;
+    margin-bottom: 20px;
+  }
+}
+
+/* Mobile Screens */
+@media only screen and (max-width: 480px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .hero-sec {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero-sec img {
+    width: 100%;
+  }
+
+  .hero-image {
+    width: 100%;
+  }
+
+  .intro-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .image,
+  .image-answer {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .image__bg {
+    height: 300px;
+    width: 300px;
+  }
+
+  .accordion-header {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .accordion-content ul li {
+    font-size: 14px;
+  }
+
+  .app-container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    overflow-x: hidden;
+  }
+
+  .form-container,
+  .result-container {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  input,
+  button {
+    width: 100%;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .image__content__2 {
+    transform: translate(calc(-50% + 5rem), calc(-50% + 5rem));
+  }
+
+  nav.navbar {
+    justify-content: center;
+  }
+
+  .logo {
+    text-align: center;
+    flex-grow: 1;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: -250px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out;
+    z-index: 999;
+    width: 200px;
+    box-sizing: border-box;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links li {
+    list-style: none;
+    margin: 10px 0;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    padding: 10px 15px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+  }
+
+  .nav-links a:hover {
+    background-color: #1b1c51;
+    color: white;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+  }
 }

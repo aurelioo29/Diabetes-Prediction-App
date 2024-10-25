@@ -139,3 +139,11 @@ window.addEventListener("beforeunload", function (event) {
   event.returnValue = confirmationMessage;
   return confirmationMessage;
 });
+
+// hamburger handler
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("nav-links");
+
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("active"); // Toggle class 'active' untuk menampilkan atau menyembunyikan menu
+});
