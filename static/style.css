@@ -68,18 +68,33 @@ nav .nav-links a:hover {
 /* Hero Section Styles */
 .hero {
   display: flex;
-  flex-direction: column; /* Susunan vertikal */
+  flex-direction: column;
   align-items: center;
   text-align: center;
   padding: 20px;
 }
 
+.hero-sec {
+  display: flex;
+  justify-content: space-around;
+  gap: 50px;
+}
+
+.hero-sec img {
+  width: 45%;
+  height: auto;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .hero-image {
-  width: 65%;
-  max-width: 2000px; /* Maksimal lebar 1200px */
-  height: auto; /* Menjaga proporsi gambar */
+  margin-top: 50px;
+  width: 60%;
+  max-width: 2000px;
+  height: auto;
   border-radius: 20px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
 }
 
@@ -103,7 +118,6 @@ nav .nav-links a:hover {
 /* Section Diabetets Explain */
 .intro {
   padding: 10px 50px;
-  /* background-color: #3d2525; */
 }
 .intro-container {
   display: flex;
@@ -163,7 +177,6 @@ nav .nav-links a:hover {
   color: #333;
   font-size: 20px;
   font-weight: 950;
-  /* text-align: center; */
 }
 
 /* Jawaban Kanan */
@@ -289,9 +302,6 @@ button {
 button:hover {
   background-color: #4cae4c;
 }
-/* .result-container {
-  margin-top: 20px;
-} */
 /* result section */
 #diabetes-text {
   font-size: 30px;
