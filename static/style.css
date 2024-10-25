@@ -376,33 +376,33 @@ footer {
   font-size: large;
 }
 
-/* Base styles tetap sama */
-
 /* Tablet Screens (max-width: 768px) */
 @media only screen and (max-width: 768px) {
-  /* Hero section adjustments */
   .hero-sec {
-    flex-direction: column; /* Stack images vertically on tablet */
+    flex-direction: column;
     gap: 20px;
   }
 
   .hero-sec img {
-    width: 100%; /* Full width on tablet */
+    width: 100%;
   }
 
-  /* Intro section adjustments */
   .intro-container {
     flex-direction: column;
-    text-align: center; /* Center text on tablet */
+    text-align: center;
   }
 
   .image,
   .image-answer {
-    width: 100%; /* Full width on tablet */
+    width: 100%;
     margin-bottom: 20px;
   }
 
-  /* Accordion text size adjustments */
+  .image__bg {
+    height: 50px;
+    width: 50px;
+  }
+
   .accordion-header {
     font-size: 18px;
   }
@@ -411,10 +411,10 @@ footer {
     font-size: 16px;
   }
 
-  /* App form and result stacking on tablet */
   .app-container {
-    flex-direction: column; /* Stack form and result vertically */
+    flex-direction: column;
     padding: 20px;
+    margin: 0 15px;
   }
 
   .form-container {
