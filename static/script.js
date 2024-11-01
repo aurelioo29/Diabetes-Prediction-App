@@ -123,7 +123,7 @@ document.getElementById("predictButton").addEventListener("click", function () {
 
         resultContainer.innerHTML += classificationReport;
       } else {
-        alert("Gagal mendapatkan hasil prediksi.");
+        alert("Harap isi data pada setiap form dengan Valid !!!");
       }
     })
     .catch((error) => {
