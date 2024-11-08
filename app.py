@@ -23,7 +23,7 @@ class DiabetesData(db.Model):
     age = db.Column(db.Integer)
     prediction_result = db.Column(db.String(50))
 
-model_path = 'model/logistic_regression_diabetes_model.pkl'
+model_path = 'model/diabetes_model.pkl'
 with open(model_path, 'rb') as file:
     model = pickle.load(file)
 
