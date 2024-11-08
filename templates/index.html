@@ -183,7 +183,7 @@
               type="text"
               name="name"
               required
-              placeholder="Masukkan nama Anda"
+              placeholder="Masukkan nama Anda (Ex: Rani)"
             />
 
             <label for="no_hp">Nomor HP</label>
@@ -191,7 +191,7 @@
               type="number"
               name="no_hp"
               required
-              placeholder="Masukkan nomor HP Anda"
+              placeholder="Masukkan nomor HP Anda (Ex: 081234567890)"
             />
 
             <label for="pregnancies"
@@ -201,7 +201,7 @@
               type="number"
               name="pregnancies"
               required
-              placeholder="Masukkan jumlah kehamilan"
+              placeholder="Masukkan jumlah kehamilan (Ex: 1)"
             />
 
             <label for="glucose">Kadar Glukosa</label>
@@ -209,7 +209,7 @@
               type="number"
               name="glucose"
               required
-              placeholder="Masukkan kadar glukosa"
+              placeholder="Masukkan kadar glukosa (Ex: 100)"
             />
 
             <label for="bloodpressure">Tekanan Darah</label>
@@ -217,7 +217,7 @@
               type="number"
               name="bloodpressure"
               required
-              placeholder="Masukkan tekanan darah"
+              placeholder="Masukkan tekanan darah (Ex: 70)"
             />
 
             <label for="skinthickness">Ketebalan Kulit</label>
@@ -225,7 +225,7 @@
               type="number"
               name="skinthickness"
               required
-              placeholder="Masukkan ketebalan kulit"
+              placeholder="Masukkan ketebalan kulit (Ex: 20)"
             />
 
             <label for="insulin">Kadar Insulin</label>
@@ -233,7 +233,7 @@
               type="number"
               name="insulin"
               required
-              placeholder="Masukkan kadar insulin"
+              placeholder="Masukkan kadar insulin (Ex: 50)"
             />
 
             <label for="bmi">Indeks Massa Tubuh (BMI)</label>
@@ -241,7 +241,7 @@
               type="text"
               name="bmi"
               required
-              placeholder="Masukkan BMI Anda"
+              placeholder="Masukkan BMI Anda (Ex: 25)"
             />
 
             <label for="diabetespedigree">Fungsi Turunan Diabetes</label>
@@ -249,7 +249,7 @@
               type="text"
               name="diabetespedigree"
               required
-              placeholder="Masukkan fungsi turunan diabetes"
+              placeholder="Masukkan fungsi turunan diabetes (Ex: 0.5)"
             />
 
             <label for="age">Usia</label>
@@ -257,7 +257,7 @@
               type="number"
               name="age"
               required
-              placeholder="Masukkan usia Anda"
+              placeholder="Masukkan usia Anda (Ex: 30)"
             />
 
             <button type="button" id="predictButton">Prediksi</button>
@@ -267,6 +267,7 @@
         <div class="result-container">
           <h2>Hasil Prediksi Anda Tampil di Sini</h2>
           <p id="diabetes-text"></p>
+          <p id="diabetes-probability"></p>
           <div id="predictionResult"></div>
         </div>
       </div>

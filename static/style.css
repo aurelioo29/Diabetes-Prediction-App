@@ -579,3 +579,11 @@ footer {
 label {
   padding-bottom: 8px;
 }
+
+#diabetes-probability {
+  font-size: 15px;
+}
+
+.prob-text {
+  font-weight: bold;
+}

@@ -56,6 +56,11 @@ document.getElementById("predictButton").addEventListener("click", function () {
           ).innerHTML = `<span class="red-text">${data.prediction_text}</span>`;
         }
 
+        // Accurate prediction text
+        document.getElementById(
+          "diabetes-probability"
+        ).innerHTML = `With Accuracy <span class="prob-text">81%</span>`;
+
         const resultContainer = document.getElementById("predictionResult");
 
         // Clear previous results
@@ -78,7 +83,6 @@ document.getElementById("predictButton").addEventListener("click", function () {
               <th>Precision</th>
               <th>Recall</th>
               <th>F1-Score</th>
-              <th>Support</th>
             </tr>
           </thead>
           <tbody>
@@ -87,35 +91,16 @@ document.getElementById("predictButton").addEventListener("click", function () {
               <td>0.83</td>
               <td>0.89</td>
               <td>0.86</td>
-              <td>100</td>
             </tr>
             <tr>
               <td>Diabetes</td>
               <td>0.77</td>
               <td>0.67</td>
               <td>0.71</td>
-              <td>54</td>
             </tr>
             <tr>
-              <td colspan="1">Accuracy</td>
-              <td></td>
-              <td></td>
-              <td>0.81</td>
-              <td>154</td>
-            </tr>
-            <tr>
-              <td colspan="1">Macro Avg</td>
-              <td>0.80</td>
-              <td>0.78</td>
-              <td>0.79</td>
-              <td>154</td>
-            </tr>
-            <tr>
-              <td colspan="1">Weighted Avg</td>
-              <td>0.81</td>
-              <td>0.81</td>
-              <td>0.81</td>
-              <td>154</td>
+              <td>Accuracy</td>
+              <td colspan="3" style="text-align: center;">0.81</td>
             </tr>
           </tbody>
         </table>
