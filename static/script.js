@@ -132,3 +132,21 @@ const navLinks = document.getElementById("nav-links");
 hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("active"); // Toggle class 'active' untuk menampilkan atau menyembunyikan menu
 });
+
+// button reset form
+document.getElementById("resetButton").addEventListener("click", function () {
+  const confirmReset = window.confirm(
+    "Are you sure you want to reset the form and delete the prediction results?"
+  );
+  if (confirmReset) {
+    document.getElementById("predictionForm").reset();
+
+    document.getElementById("diabetes-text").innerHTML = "";
+    document.getElementById("diabetes-probability").innerHTML = "";
+    document.getElementById("predictionResult").innerHTML = "";
+
+    document.getElementById("app").scrollIntoView({ behavior: "smooth" });
+  } else {
+    console.log("Cancel reset form");
+  }
+});

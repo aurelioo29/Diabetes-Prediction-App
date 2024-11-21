@@ -587,3 +587,8 @@ label {
 .prob-text {
   font-weight: bold;
 }
+
+.btn-reset {
+  margin-top: 5px;
+  width: 350px;
+}
