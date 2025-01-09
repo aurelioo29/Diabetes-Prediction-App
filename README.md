@@ -9,8 +9,11 @@ This project is a **web application** designed to predict **diabetes** in female
 1. **Clone the repository**:
 
    ```sh
-   git clone https://github.com/aurelioo29/prediction-diabetes
-   cd prediction-diabetes
+   git clone https://github.com/aurelioo29/Diabetes-Prediction-App.git
+    ```
+   
+    ```sh
+   cd Diabetes-Prediction-App
    ```
 
 2. **Create a virtual environment**:
